@@ -1,10 +1,13 @@
 import { defineUserConfig } from "vuepress";
 import type { DefaultThemeOptions } from "vuepress";
 import recoTheme from "vuepress-theme-reco";
+import { sitemapPlugin } from "vuepress-plugin-sitemap2";
 
 export default defineUserConfig({
   base: "tjyDocs",
-  plugins: [],
+  plugins: [sitemapPlugin({
+    hostname: 'https://cscec-g05.top/tjyDocs/'
+  })],
   title: "投建营一体化平台开发帮助文档",
   description: "Just playing around",
   theme: recoTheme({
@@ -98,9 +101,9 @@ export default defineUserConfig({
       ],
     },
     algolia: {
-      appId: 'UJ3ZV5QUBE',
-      apiKey: 'd2f6a1b66fc1101056eaa082a999c385',
-      indexName: 'tjyindex',
+      appId: 'J4399XSOTW',
+      apiKey: 'e32bb24fb662a239ef50f2b564af478a',
+      indexName: 'cscec-g05',
       inputSelector: '### REPLACE ME ####',
       algoliaOptions: { 'facetFilters': ["lang:$LANG"] },
       debug: false // Set debug to true if you want to inspect the dropdown
